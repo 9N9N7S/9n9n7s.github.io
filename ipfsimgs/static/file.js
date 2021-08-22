@@ -1,5 +1,5 @@
 /*
- * @xkx https://github.com/jialezi/img2ipfs/
+ * @icu https://github.com/jialezi/img2ipfs/
  */
 $(() => {
     /* 临时粘贴上传 */
@@ -164,7 +164,7 @@ $(() => {
                                     href: imgSrc,
                                     target: '_blank'
                                 });
-                            //代码链接xkx
+                            //代码链接icu
                             $('.' + randomClass)
                                 .find('#Imgs_url')
                                 .attr({
@@ -185,7 +185,7 @@ $(() => {
                                 .attr({
                                     value: '![]('+imgSrc+')'
                                 });
-                            //显示链接xkx
+                            //显示链接icu
                             $('.' + randomClass)
                                 .find('#show')
                                 .show();
@@ -194,7 +194,7 @@ $(() => {
                                 .attr({
                                     value: imgSrc
                                 });
-                            //复制所有xkx
+                            //复制所有icu
                             $('.copyall')
                                 .show();
                             var tt = $('.filelist .title').html().replace('上传列表', '');
@@ -259,25 +259,25 @@ function chage(obj){
 	}
 }
 function copyAll(obj){
-	var xkx = "";
+	var icu = "";
 	for(var i=0;i<document.querySelectorAll('#show').length;i++){; 
-		var xkx = xkx + document.querySelectorAll('#show')[i].value + '\n';
+		var icu = icu + document.querySelectorAll('#show')[i].value + '\n';
 	}
 	var txa = document.createElement('textarea');
-	txa.value = xkx;
+	txa.value = icu;
     document.body.appendChild(txa);
 	txa.select();
 	var res = document.execCommand('copy');
 	document.body.removeChild(txa);
 	console.log('copy success');
-	console.log(xkx);
-	if (browserRedirect()) {alert('设备类型为手机，有一定几率复制失败！请查看剪切板是否成功复制');}
+	console.log(icu);
+	if (browserRedirect()) {alert('手机有一定几率复制失败！请查看剪切板是否成功复制!');}
 }
 function oCopy(obj){
 	obj.select();
 	document.execCommand("Copy");
 	console.log(obj.value);
-	if (browserRedirect()) {alert('设备类型为手机，有一定几率复制失败！请查看剪切板是否成功复制');}
+	if (browserRedirect()) {alert('手机有一定几率复制失败！请查看剪切板是否成功复制！');}
 }
 function browserRedirect(){
     var sUserAgent = navigator.userAgent.toLowerCase();
